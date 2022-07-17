@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-size: 150px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+  height: 99vh;
+  display: grid;
+  justify-content: center;
+  z-index: 10;
+}
+
+.bgskin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden -moz-hidden-unscrollable;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  z-index: 1;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  transition: color 1s;
+  top: 220px;
+}
+
+a:hover {
+  color: red !important;
+  text-decoration: line-through;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#adick {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: transparent;
+  transition: background-color 1s;
+}
+
+#link {
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+}
+
+#link:hover + #adick {
+  background-color: whitesmoke;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 35px;
+  }
+
+  .hero {
+    position: relative;
+    top: 100px;
+  }
+}
